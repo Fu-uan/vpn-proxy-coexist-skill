@@ -1,9 +1,9 @@
 ---
-name: windows-vpn-proxy-coexistence
-description: Use when Windows enterprise VPN or iOA, Clash Verge/Mihomo TUN, and the system proxy conflict, causing intranet failures, browser stalls, Codex reconnects, or dot local-computer offline status. Not a macOS utun configuration guide.
+name: vpn-proxy-coexist-skill
+description: Use when Windows enterprise VPN or iOA, Clash Verge/Mihomo TUN, and the system proxy conflict, causing intranet failures, browser stalls, Codex/ChatGPT reconnects, or dot local-computer offline status. Not a macOS utun configuration guide.
 ---
 
-# Windows VPN 与代理共存
+# VPN 与代理共存排障
 
 定位 DNS、系统代理绕过、WFP 出口绑定和 fake IP 路由冲突，让企业内网、代理服务和本机执行连接在用户需要的组合下同时工作。
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "VPN 与代理共存排障"
+  short_description: "排查 VPN、Clash TUN、系统代理共存引起的内网、Codex/ChatGPT 与本机连接故障"
+  default_prompt: "使用 $vpn-proxy-coexist-skill 排查 Windows 下 VPN、Clash TUN 与系统代理共存引起的内网、Codex/ChatGPT 和 dot 本机连接问题。"

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
-  <title id="title">CoRoute — clear routes for connected work</title>
-  <desc id="desc">A dark technical banner with the CoRoute name and three blue and cyan network paths leading to Corporate, Cloud and Local destinations.</desc>
+  <title id="title">VPN Proxy Coexist Skill — clear routes for connected work</title>
+  <desc id="desc">A dark technical banner with the VPN Proxy Coexist Skill name and three blue and cyan network paths leading to Corporate, Cloud and Local destinations.</desc>
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1280" y2="360" gradientUnits="userSpaceOnUse">
       <stop stop-color="#0c182a"/>
@@ -34,10 +34,10 @@
 
   <g font-family="Segoe UI, Arial, sans-serif">
     <g fill="#91a8c4" font-size="11" font-weight="600" letter-spacing="2.4">
-      <text x="64" y="64">WINDOWS NETWORK COEXISTENCE</text>
+      <text x="64" y="64">WINDOWS COEXISTENCE SKILL</text>
     </g>
-    <text x="60" y="143" fill="#f1f6ff" font-size="68" font-weight="700" letter-spacing="-3.2">CoRoute</text>
-    <text x="64" y="190" fill="#c2cfe1" font-size="22" font-weight="400" letter-spacing="-.2">Clear routes for connected work</text>
+    <text x="60" y="143" fill="#f1f6ff" font-size="60" font-weight="700" letter-spacing="-2.4">VPN + Proxy</text>
+    <text x="64" y="190" fill="#c2cfe1" font-size="22" font-weight="400" letter-spacing="-.2">Coexistence troubleshooting</text>
     <rect x="64" y="224" width="40" height="3" rx="1.5" fill="#6a9dff"/>
     <g fill="#8aa2bf" font-size="11" font-weight="600" letter-spacing="1.1">
       <text x="64" y="271">ENTERPRISE VPN</text>

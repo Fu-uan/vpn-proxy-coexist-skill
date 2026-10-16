@@ -1,4 +1,0 @@
-interface:
-  display_name: "Windows VPN 与代理共存"
-  short_description: "排查企业 VPN、Clash TUN、系统代理与 Codex 本机连接冲突"
-  default_prompt: "使用 $windows-vpn-proxy-coexistence 排查企业 VPN、Clash TUN 与系统代理共存时的断网及本机连接问题。"

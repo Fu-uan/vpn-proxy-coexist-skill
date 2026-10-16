@@ -1,24 +1,24 @@
 <p align="center">
-  <img src="assets/icon.svg" alt="CoRoute 路由图标" width="112" height="112">
+  <img src="assets/icon.svg" alt="VPN Proxy Coexist Skill 路由图标" width="112" height="112">
 </p>
 
 <p align="center">
-  <img src="assets/banner.svg" alt="CoRoute — 企业内网、云端代理与本机连接的三路共存" width="100%">
+  <img src="assets/banner.svg" alt="VPN Proxy Coexist Skill — 企业内网、云端代理与本机连接的三路共存" width="100%">
 </p>
 
-<h1 align="center">CoRoute</h1>
+<h1 align="center">VPN Proxy Coexist Skill</h1>
 
-<p align="center">让企业内网、代理与本机连接各走其路</p>
+<p align="center">VPN、TUN 与系统代理共存排障</p>
 
 <p align="center">
-  <a href="skills/windows-vpn-proxy-coexistence/SKILL.md"><img src="https://img.shields.io/badge/Agent_Skill-使用指南-2563EB?style=for-the-badge" alt="Agent Skill 使用指南"></a>
+  <a href="skills/vpn-proxy-coexist-skill/SKILL.md"><img src="https://img.shields.io/badge/Agent_Skill-使用指南-2563EB?style=for-the-badge" alt="Agent Skill 使用指南"></a>
   <img src="https://img.shields.io/badge/Platform-Windows-111827?style=for-the-badge" alt="适用 Windows">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-2563EB?style=for-the-badge" alt="MIT License"></a>
 </p>
 
 ---
 
-企业 VPN、Clash TUN 和系统代理同时开启时，网页可能一直加载，Codex 反复重连，dot 的电脑也可能显示离线。CoRoute 把一次成功排障中可复用的判断整理为 **Agent Skill**：先定位是哪条连接、哪一层出了问题，再采用有证据支持的修复。
+在 Windows 上同时开启 iOA 等企业 VPN、Clash TUN 和系统代理时，可能出现内网打不开、浏览器卡住、Codex/ChatGPT 重连或 dot 本机离线。本 Skill 把一次成功排障中可复用的判断整理为 **Agent Skill**：先定位是哪条连接、哪一层出了问题，再采用有证据支持的修复。
 
 适合 Windows 上的 iOA / 企业 VPN、Clash Verge Rev / Mihomo 共存问题。也可直接阅读文档，将方法用于手工排查。它不附带可一键导入的个人网络配置。
 
@@ -38,14 +38,14 @@
 仓库没有运行依赖或自动联网脚本。克隆仓库后，将其中的 Skill 目录复制到你的 Agent 支持的技能目录。
 
 ```bash
-git clone https://github.com/Fu-uan/codex-network-coexistence.git
+git clone https://github.com/Fu-uan/vpn-proxy-coexist-skill.git
 ```
 
 对于支持项目技能的 Codex，可在**你自己的目标项目**根目录用 PowerShell 安装。先输入仓库在你本机的实际路径；同名技能已存在时停止，不覆盖。
 
 ```powershell
 $Source = Read-Host '仓库完整路径'
-$Skill = 'windows-vpn-proxy-coexistence'
+$Skill = 'vpn-proxy-coexist-skill'
 $SourceSkill = Join-Path $Source "skills/$Skill"
 $Destination = Join-Path (Get-Location) ".agents/skills/$Skill"
 if (-not (Test-Path -LiteralPath (Join-Path $SourceSkill 'SKILL.md'))) {
@@ -63,19 +63,19 @@ Copy-Item -LiteralPath $SourceSkill -Destination $Destination -Recurse
 调用示例：
 
 ```text
-使用 $windows-vpn-proxy-coexistence 排查我的 Windows 网络。
+使用 $vpn-proxy-coexist-skill 排查我的 Windows 网络。
 企业 VPN、Clash TUN 和系统代理同时开启后，内网或 Codex/dot 连接不稳定。
 先只读检查真实版本、DNS、代理绕过和路由，区分聊天与本机执行通道。
 修改前备份；可能断开远程连接时，先安排本地恢复方式。
 ```
 
-如果 Agent 不支持 Skill，直接向它提供 [SKILL.md](skills/windows-vpn-proxy-coexistence/SKILL.md)，并让它按需读取同目录 `references` 下的文档。
+如果 Agent 不支持 Skill，直接向它提供 [SKILL.md](skills/vpn-proxy-coexist-skill/SKILL.md)，并让它按需读取同目录 `references` 下的文档。
 
 ## 包含哪些内容
 
-- [Skill 入口](skills/windows-vpn-proxy-coexistence/SKILL.md)：症状分流、修改边界和验收标准。
-- [只读核查命令](skills/windows-vpn-proxy-coexistence/references/只读核查命令.md)：PowerShell 采样与证据的解释范围。
-- [Windows 共存细节](skills/windows-vpn-proxy-coexistence/references/Windows共存细节.md)：DNS、WFP、代理绕过与版本限定的路由案例，附源码依据。
+- [Skill 入口](skills/vpn-proxy-coexist-skill/SKILL.md)：症状分流、修改边界和验收标准。
+- [只读核查命令](skills/vpn-proxy-coexist-skill/references/只读核查命令.md)：PowerShell 采样与证据的解释范围。
+- [Windows 共存细节](skills/vpn-proxy-coexist-skill/references/Windows共存细节.md)：DNS、WFP、代理绕过与版本限定的路由案例，附源码依据。
 
 ## 适用范围与验证边界
 
@@ -95,6 +95,6 @@ Skill 默认先诊断，不会自行执行脚本修改网络。自动恢复机�
 
 本项目是独立的社区经验整理，与 OpenAI、腾讯、Clash Verge Rev 或 Mihomo 项目无隶属关系。
 
-方法依据及固定版本源码链接见 [Windows 共存细节](skills/windows-vpn-proxy-coexistence/references/Windows共存细节.md#公开依据)。未复制上游实现代码。Skill 结构使用 [Agent Skills 规范](https://agentskills.io/specification)，README 图标与横幅为本仓库原创 SVG。
+方法依据及固定版本源码链接见 [Windows 共存细节](skills/vpn-proxy-coexist-skill/references/Windows共存细节.md#公开依据)。未复制上游实现代码。Skill 结构使用 [Agent Skills 规范](https://agentskills.io/specification)，README 图标与横幅为本仓库原创 SVG。
 
 本仓库原创内容采用 [MIT License](LICENSE)。
