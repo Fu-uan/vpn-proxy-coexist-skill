@@ -1,0 +1,18 @@
+# Machine-specific configuration and evidence never belong in this repository
+*.log
+*.sqlite*
+*.db
+*.pcap*
+*.bak
+*.backup
+.env
+.env.*
+!.env.example
+secrets/
+logs/
+backups/
+captures/
+local/
+__pycache__/
+.DS_Store
+Thumbs.db

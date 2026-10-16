@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+  <title id="title">CoRoute — clear routes for connected work</title>
+  <desc id="desc">A dark technical banner with the CoRoute name and three blue and cyan network paths leading to Corporate, Cloud and Local destinations.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1280" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0c182a"/>
+      <stop offset=".53" stop-color="#080f1d"/>
+      <stop offset="1" stop-color="#071320"/>
+    </linearGradient>
+    <radialGradient id="ambient" cx="0" cy="0" r="1" gradientTransform="translate(858 180) scale(394 270)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#16588c" stop-opacity=".23"/>
+      <stop offset="1" stop-color="#16588c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="corporate" x1="690" y1="180" x2="1040" y2="83" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#62a2ff"/>
+      <stop offset="1" stop-color="#668aff"/>
+    </linearGradient>
+    <linearGradient id="cloud" x1="690" y1="180" x2="1040" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#62a2ff"/>
+      <stop offset="1" stop-color="#55c6ff"/>
+    </linearGradient>
+    <linearGradient id="local" x1="690" y1="180" x2="1040" y2="277" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#62a2ff"/>
+      <stop offset="1" stop-color="#58d9d3"/>
+    </linearGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r=".8" fill="#718ba8" fill-opacity=".16"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="360" rx="18" fill="url(#background)"/>
+  <rect width="1280" height="360" rx="18" fill="url(#ambient)"/>
+  <rect x="548" y="24" width="708" height="312" fill="url(#dots)"/>
+  <rect x=".5" y=".5" width="1279" height="359" rx="17.5" fill="none" stroke="#2a3e58" stroke-opacity=".7"/>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <g fill="#91a8c4" font-size="11" font-weight="600" letter-spacing="2.4">
+      <text x="64" y="64">WINDOWS NETWORK COEXISTENCE</text>
+    </g>
+    <text x="60" y="143" fill="#f1f6ff" font-size="68" font-weight="700" letter-spacing="-3.2">CoRoute</text>
+    <text x="64" y="190" fill="#c2cfe1" font-size="22" font-weight="400" letter-spacing="-.2">Clear routes for connected work</text>
+    <rect x="64" y="224" width="40" height="3" rx="1.5" fill="#6a9dff"/>
+    <g fill="#8aa2bf" font-size="11" font-weight="600" letter-spacing="1.1">
+      <text x="64" y="271">ENTERPRISE VPN</text>
+      <text x="217" y="271">TUN / PROXY</text>
+      <text x="345" y="271">CODEX</text>
+    </g>
+    <g fill="#38506c">
+      <circle cx="198" cy="267" r="2"/>
+      <circle cx="326" cy="267" r="2"/>
+    </g>
+
+    <g fill="none" stroke="#29445f" stroke-width="1">
+      <path d="M588 83h66m-37 97h37m-66 97h66" stroke-opacity=".5"/>
+      <path d="M690 42v27m0 222v27" stroke-opacity=".6"/>
+    </g>
+    <path d="M588 180h74" fill="none" stroke="#7a9ac1" stroke-opacity=".35" stroke-width="2" stroke-dasharray="3 8" stroke-linecap="round"/>
+
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M714 174h53c52 0 41-91 93-91h179" stroke="#668aff" stroke-opacity=".06" stroke-width="24"/>
+      <path d="M714 180h325" stroke="#55c6ff" stroke-opacity=".06" stroke-width="24"/>
+      <path d="M714 186h53c52 0 41 91 93 91h179" stroke="#58d9d3" stroke-opacity=".06" stroke-width="24"/>
+      <path d="M714 174h53c52 0 41-91 93-91h179" stroke="#668aff" stroke-opacity=".16" stroke-width="7"/>
+      <path d="M714 180h325" stroke="#55c6ff" stroke-opacity=".16" stroke-width="7"/>
+      <path d="M714 186h53c52 0 41 91 93 91h179" stroke="#58d9d3" stroke-opacity=".16" stroke-width="7"/>
+      <path d="M714 174h53c52 0 41-91 93-91h179" stroke="url(#corporate)" stroke-width="2"/>
+      <path d="M714 180h325" stroke="url(#cloud)" stroke-width="2"/>
+      <path d="M714 186h53c52 0 41 91 93 91h179" stroke="url(#local)" stroke-width="2"/>
+    </g>
+
+    <circle cx="690" cy="180" r="42" fill="#192f4d" fill-opacity=".25"/>
+    <circle cx="690" cy="180" r="32" fill="#10223a" stroke="#355d89"/>
+    <circle cx="690" cy="180" r="23" fill="#0d1b2f" stroke="#7cafff" stroke-width="1.5"/>
+    <g fill="none" stroke="#d1e5ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M679 180h9m0 0 8-8h6m-14 8h14m-14 0 8 8h6"/>
+    </g>
+    <circle cx="688" cy="180" r="3.5" fill="#0d1b2f" stroke="#d1e5ff" stroke-width="1.8"/>
+    <text x="690" y="239" text-anchor="middle" fill="#6f8dab" font-size="9" font-weight="600" letter-spacing="2.2">COORDINATED ROUTING</text>
+
+    <g fill="#0a1729" stroke-width="1.5">
+      <circle cx="1040" cy="83" r="7" stroke="#7d9bff"/>
+      <circle cx="1040" cy="180" r="7" stroke="#70ccff"/>
+      <circle cx="1040" cy="277" r="7" stroke="#6fded8"/>
+    </g>
+    <g>
+      <circle cx="1040" cy="83" r="2.5" fill="#94adff"/>
+      <circle cx="1040" cy="180" r="2.5" fill="#8adaff"/>
+      <circle cx="1040" cy="277" r="2.5" fill="#8ceae3"/>
+    </g>
+    <g fill="#dce8f8" font-size="13" font-weight="600" letter-spacing="1.8">
+      <text x="1064" y="80">CORPORATE</text>
+      <text x="1064" y="177">CLOUD</text>
+      <text x="1064" y="274">LOCAL</text>
+    </g>
+    <g fill="#718ba8" font-size="10" font-weight="400" letter-spacing=".5">
+      <text x="1064" y="99">Private resources</text>
+      <text x="1064" y="196">Connected services</text>
+      <text x="1064" y="293">Local execution</text>
+    </g>
+  </g>
+</svg>
