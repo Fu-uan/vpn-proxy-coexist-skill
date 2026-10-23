@@ -18,7 +18,7 @@
 
 ---
 
-在 Windows 上同时开启 iOA 等企业 VPN、Clash TUN 和系统代理时，可能出现内网打不开、浏览器卡住、Codex/ChatGPT 重连或 dot 本机离线。本 Skill 把一次成功排障中可复用的判断整理为 **Agent Skill**：先定位是哪条连接、哪一层出了问题，再采用有证据支持的修复。
+在 Windows 上同时开启 iOA 等企业 VPN、Clash TUN 和系统代理时，可能出现内网打不开、浏览器卡住、工作空间设置加载失败、Codex/ChatGPT 重连或 dot 本机离线。本 Skill 将实际排障中可复用的判断整理为 **Agent Skill**：先区分网络传输、服务端挑战和应用状态，再采用有证据支持的修复；不预设所有故障都由 VPN 或代理冲突引起。
 
 适合 Windows 上的 iOA / 企业 VPN、Clash Verge Rev / Mihomo 共存问题。也可直接阅读文档，将方法用于手工排查。它不附带可一键导入的个人网络配置。
 
@@ -29,7 +29,9 @@
 | 开启 TUN 后浏览器像断网 | DNS 监听争用、解析链、实际选路 |
 | 公司域名已设置 DIRECT 仍打不开 | 系统代理绕过、WFP 与出口绑定 |
 | Codex 可以聊天，dot 的电脑却离线 | 本机执行通道、长连接与 fake IP 路由 |
+| 工作空间设置加载失败，接口返回 403 | 已登录客户端的挑战响应、账户/工作空间请求与执行器注册状态 |
 | 修改配置后没有生效或又变回去 | 活动增强、DNS 覆盖顺序与 UI 缓存 |
+| 重启后 TUN 失效，或换节点没有改善 | 实际权限、服务模式、运行状态、真实出口与旧连接 |
 
 **三者同时开启并不必然冲突。** 公司网页、Codex 对话和 dot 本机操作是三个独立验收目标；一个成功不能代替另外两个。
 
@@ -75,7 +77,7 @@ Copy-Item -LiteralPath $SourceSkill -Destination $Destination -Recurse
 
 - [Skill 入口](skills/vpn-proxy-coexist-skill/SKILL.md)：症状分流、修改边界和验收标准。
 - [只读核查命令](skills/vpn-proxy-coexist-skill/references/只读核查命令.md)：PowerShell 采样与证据的解释范围。
-- [Windows 共存细节](skills/vpn-proxy-coexist-skill/references/Windows共存细节.md)：DNS、WFP、代理绕过与版本限定的路由案例，附源码依据。
+- [Windows 共存细节](skills/vpn-proxy-coexist-skill/references/Windows共存细节.md)：DNS、WFP、版本限定的路由案例，以及挑战响应、重启权限、对照变量与回滚预检。
 
 ## 适用范围与验证边界
 
@@ -84,6 +86,8 @@ Copy-Item -LiteralPath $SourceSkill -Destination $Destination -Recurse
 这不代表所有版本、VPN 模式或地址布局都适用。特别是文档中的保留 `/30` 路由方法，只针对已核实的 fake IP 服务布局与具体路由冲突；不能照抄为通用补丁。重启恢复、长期运行与其他版本未验证。
 
 Skill 默认先诊断，不会自行执行脚本修改网络。自动恢复机制需由使用它的 Agent 在实际环境中准备，仓库没有预装恢复工具。
+
+服务端挑战与应用恢复指引用于减少误判，不保证消除所有 403。多项措施共同恢复后，不能据此确定单一根因；结构检查和离线场景审查也不能替代用户真实业务与长期运行验证。
 
 ## 隐私与反馈
 
